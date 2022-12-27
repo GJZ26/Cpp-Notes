@@ -6,7 +6,9 @@
 Parte fundamental de los lenguajes de programación, es el uso de variables para
 almacenar información de forma temporal dentro del programa.
 
-Para definir una variable en C++, se usa el siguiento formato, TIPO nombreVarible = valor;
+Para definir una variable en C++, se usa el siguiento formato:
+
+TIPO nombreVarible = valor;
 
 A continuación, una lista de los tipos de variables, valores mínimos, máximos y tamaños en bytes.
 */

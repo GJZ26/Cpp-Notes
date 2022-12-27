@@ -40,5 +40,57 @@ int main()
     decir, aquellos que no llevan puntos decimales.
     */
 
+    // INCREMENTOS
+    /*
+
+    Una parte importante de las variables es la disponibilidad de poder autocincrementarse
+    o decrementarse, de tal forma que nos sirva al momento de iterar sobre algo.
+    Se puede hacer dicha operación como:
+
+        a=a+1 para incrementar
+                ó
+        a=a-1 para decrementar
+
+    O bien, una forma más corta:
+
+        a+=1
+          ó
+        a-=1
+
+    Pero claro está que en C++ (como en muchos de los lenguajes actuales) es posible utilizar
+    los símbolo ++ o -- para hacer esta misma operación de una forma más corta.
+
+    Sin embargo, es importante aclarar algunas cosas:
+
+    a++ / a-- -> Primero utiliza la variable, después hace el incremento o decremento
+    ++a / --a -> Primero hace el decremento, después hace uso de la variable
+
+    Lo veamos en un ejemplo:
+    */
+
+    // Inicializamos los valores como 2
+    int g = 2;
+    int h = 2;
+
+    // Al usar a++, primero usará el valor actual de la variable, e incrementará o decrementará uno.
+    std::cout << "g++ = " << g++ << std::endl; // 2
+    std::cout << "h-- = " << h-- << std::endl; // 2
+
+    // La siguiente ocación que usemos las variables, éstas mostrarán su valor con los cambios realizados
+    std::cout << "Valor de g = " << g << std::endl; // 3
+    std::cout << "Valor de h = " << h << std::endl; // 1
+
+    // VALORES ACTUALES
+    // g = 3
+    // h = 1
+
+    // Al usar ++a, primero hará el incremento, luego usará la variable con los cambios hechos
+    std::cout << "++g = " << ++g << std::endl; // 4
+    std::cout << "--h = " << --h << std::endl; // 0
+
+    // Al modificar los valores antes de usarlo, los proximos usos tendrán el mismo valor
+    std::cout << "Valor de g = " << g << std::endl; // 4
+    std::cout << "Valor de h = " << h << std::endl; // 0
+
     return 0;
 }
