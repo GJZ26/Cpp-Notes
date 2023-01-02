@@ -45,5 +45,40 @@ int main(){
     std::cout << "Asi se imprime el valor Double: " << doble << std::endl;
     std::cout << "Asi se imprime el valor String: " << cadena << std::endl;
 
+    // Variables sin asignar - unsigned
+    /*
+    También tenemos la posibilidad de extender el límite de las variables que almacenemos con las variables unsigned.
+    Estos tipos de variables únicamente almacenan valores positivos, comenzando desde el cero, provocando que el espacio usado
+    para almacenar datos negativos se duplique y pasen a ser datos positivos.
+    Por ejemplo:
+    */
+
+    unsigned int intUns = -1; //     Max Unsigned | 4,294,967,295
+    unsigned short shortUns = -1; // Max Unsigned |     65,535
+    unsigned long longUns = -1; //   Max Unsigned | 4,294,967,295
+    unsigned char charUns = -2; //   Max Unsigned |      255
+
+    std::cout<< intUns << std::endl;
+    std::cout<< shortUns << std::endl;
+    std::cout<< longUns << std::endl;
+    std::cout<< charUns << std::endl;
+
+    /*
+    intUns, shortUns, longUns y charUns, son variables sin asignar, por lo que sus valores es igual a su valor 
+    mínimo - 1.
+    Al no permitir valores negativos, se imprimirá el valor máximo - el valor negativo, por ejemplo:
+
+    La variable charUns, que es un char, su valor mínimo es -128,
+    Así que su valor extendido sería, (128 x 2) - 1 = 256-1 = 255
+
+
+    Así que su valor máximo paso de ser 127 a 255.
+
+    Al declararlo con el valor de -2, almacenará el doble del valor mínimo (256) menos el valor negativo (-2),
+    dando 254, que en valor ASCII sería el símbolo (■).
+
+
+    */    
+
     return 0;
 }
